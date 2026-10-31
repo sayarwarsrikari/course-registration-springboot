@@ -1,0 +1,53 @@
+PROMPT 1 - Understanding Requirements
+
+I'm building a course registration system. Before I write any code, help me understand what I'm actually building.
+
+What does this system do in plain terms? Who uses it and what do they want to accomplish?
+
+What is the difference between enrolling and joining a waitlist, and when does each one happen?
+
+What does FIFO mean for the waitlist? Give me a real example with three people joining in sequence and one seat opening up. Who gets it and why?
+
+What is a prerequisite in this context and how do we check if someone has it?
+
+What counts as an eligible learner?
+
+
+---
+
+PROMPT 2 - Edge Cases
+
+I'm working on a course registration system. Help me think through the edge cases before I write any logic.
+
+What happens if a student who is already enrolled tries to enroll again?
+
+What happens if a student tries to join the waitlist but they're already on it?
+
+What happens if the first person on the waitlist doesn't meet the prerequisites when a seat opens up? Do they lose their spot or stay in line?
+
+What happens if a student tries to drop a course they were never in?
+
+What if they drop and then try to drop again?
+
+Can a student be enrolled and on the waitlist at the same time? How do we stop that?
+
+What if the waitlist is empty when someone drops?
+
+
+---
+
+PROMPT 3 - Test Cases
+
+I need to figure out what tests to write for my enrollment service. Give me the scenarios I need to cover.
+
+I know I need the happy path where someone enrolls successfully. What else?
+
+What should happen when the course is full and someone tries to enroll?
+
+What is the test that proves waitlist order is correct and not random?
+
+What test proves that when someone drops, the right person from the waitlist gets promoted?
+
+What test proves the enrolled count never goes above capacity no matter what?
+
+What tests cover the failure cases like missing prerequisites, duplicate requests, and dropping when not enrolled?
